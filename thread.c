@@ -18,7 +18,7 @@ void thread_handler(int sig)
     {
         // pause the process thread
         case SIGUSR1:
-            pause();
+            //pause();
             break;
         // unpause a process thread
         case SIGUSR2:

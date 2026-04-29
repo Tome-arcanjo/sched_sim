@@ -3,7 +3,7 @@ int make_time_max();
 
 int make_time_limit();
 
-int make_process_time();
+int make_process_time(struct proc *p);
 
 double make_time();
 

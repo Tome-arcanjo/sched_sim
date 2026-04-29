@@ -1,0 +1,13 @@
+- [OK] fix the lock error
+- insert option to remove prints to debug
+- organize files in folders
+    - src
+    - schedulers
+        - fifo
+        - ...
+    - outro? lib? include?
+- thinking in new ways, preferably easier, to implement the schedulers
+- insert print of current QUANTUM
+- intert option to define the QUANTUM in command line
+- include options in command line: --quantum X --nproc Y
+    - maybe the scheduler as an option too? --sched sjf ?

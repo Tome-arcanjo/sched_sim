@@ -96,13 +96,23 @@ int main (int argc, char *argv[])
     sigemptyset(&set); 
     if(sigaddset(&set, SIGUSR1) == -1) 
     {
-        perror("Sigaddset error");                                                 
-        pthread_exit((void *)1);                                                   
+        perror("Sigaddset error");
+        pthread_exit((void *)1);
     }
     if(sigaddset(&set, SIGUSR2) == -1) 
     {
-        perror("Sigaddset error");                                                  
-        pthread_exit((void *)1);                                                    
+        perror("Sigaddset error");
+        pthread_exit((void *)1);
+    }
+
+    // NOTE: Marlison's FIX
+    // blocking signals for all child threads (inheriting), only listen to
+    // signals with sigwait, and the SO treats the sent signals as PENDING,
+    // unti the thread calls sigwait, not losing the signals sent before the
+    // sigwait call
+    if (pthread_sigmask(SIG_BLOCK, &set, NULL) != 0) {
+        perror("pthread_sigmask error");
+        exit(3);
     }
 
     // Iniciando a semente do random

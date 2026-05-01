@@ -6,8 +6,11 @@
         - fifo
         - ...
     - outro? lib? include?
-- thinking in new ways, preferably easier, to implement the schedulers
 - [OK] insert print of current QUANTUM, and NPROC
 - [OK] intert option to define the QUANTUM in command line
 - [OK] include options in command line: --quantum X --nproc Y
     - maybe the scheduler as an option too? --sched sjf ?
+- check the times printed in final stats (are they in seconds/micro/mili?)
+- is it possible to simplify the time count by removing the
+  count_ready_in(current); function and insert it in enqueue/dequeue?
+- thinking in new ways, preferably easier, to implement the schedulers

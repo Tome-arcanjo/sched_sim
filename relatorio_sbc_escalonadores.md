@@ -21,7 +21,7 @@ This paper presents the development, implementation, and comparative analysis of
 ---
 
 ## 1. Introdução
-O escalonamento de CPU é uma das principais tarefas desempenhadas pelo núcleo de um Sistema Operacional [Tanenbaum e Bos 2016]. Ele consiste em decidir qual dos processos aptos (em estado *Ready*) receberá o direito de utilizar o processador em um determinado instante de tempo. O objetivo de um bom escalonador é otimizar métricas do sistema, como maximizar a utilização da CPU, manter a vazão alta e minimizar tempos de resposta e de espera de processos.
+O escalonamento de CPU é uma das principais tarefas desempenhadas pelo núcleo de um Sistema Operacional (TANENBAUM; BOS, 2016). Ele consiste em decidir qual dos processos aptos (em estado *Ready*) receberá o direito de utilizar o processador em um determinado instante de tempo. O objetivo de um bom escalonador é otimizar métricas do sistema, como maximizar a utilização da CPU, manter a vazão alta e minimizar tempos de resposta e de espera de processos.
 
 No contexto acadêmico, o desenvolvimento prático dessas políticas auxilia na fixação de conceitos cruciais como preempção, quantum, filas de prioridade e starvation. Este trabalho documenta a implementação de políticas clássicas e dinâmicas de escalonamento no simulador `sched_sim`, desenvolvido na disciplina DCT2101 - Sistemas Operacionais, do BSI CERES-UFRN. 
 
@@ -145,4 +145,5 @@ Além disso, as políticas de feedback dinâmico (`prio_dynamic` e `prio_dynamic
 ---
 
 ## Referências
-1. TANENBAUM, Andrew S.; BOS, Herbert. **Sistemas Operacionais Modernos**. 4. ed. Rio de Janeiro: Pearson, 2016.
+
+TANENBAUM, Andrew S.; BOS, Herbert. **Sistemas Operacionais Modernos**. 4. ed. Rio de Janeiro: Pearson, 2016.
